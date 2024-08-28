@@ -62,3 +62,22 @@ point(0, 0)
 plt.grid(axis="both", linestyle="--")
 drawAxis()
 plt.show()
+
+def d1(x: float = 6):
+    y = x * -2 + 13
+    point(x,y)
+    plt.plot([x, x], [y, 0], "g--")
+    plt.plot([x, 0], [y, y], "g--")
+    # plt.show()
+def line(x,y,x1,y1):
+    plt.plot([x,x1],[y,y1])
+
+for x in [4,5,6,7]: d1(x)
+y = 4 * -2 + 13
+y1 = 7 * -2 + 13
+line(4,y,7,y1 )
+drawAxis(7)
+plt.text(2,-3,"y = -2x + 13")
+plt.grid("both")
+plt.show()
+
