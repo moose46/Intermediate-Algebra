@@ -1,4 +1,7 @@
 {
 	"python.terminal.activateEnvInCurrentTerminal": true,
-	"python.defaultInterpreterPath": "C:/Users/me/Documents/VisualCodeSource/Intermediate Algebra/.venv/Scripts/python.exe"
+	"python.defaultInterpreterPath": "C:/Users/me/Documents/VisualCodeSource/Intermediate Algebra/.venv/Scripts/python.exe",
+	"code-runner.runInTerminal": true,
+	"code-runner.saveAllFilesBeforeRun": true,
+	"code-runner.saveFileBeforeRun": true
 }

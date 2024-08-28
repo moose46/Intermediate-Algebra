@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 from matplotlib.lines import lineStyles
 
 # figure 3
+# https://stackoverflow.com/questions/50752618/run-code-is-not-working-in-visual-studio-code
 t = np.arange(0.0, 3.0, 0.2)
 for x in t:
     print(x)
@@ -23,7 +24,7 @@ plt.plot([0, 0], [0, -5], color="red")
 plt.plot([0, 0], [0, 5], color="red")
 plt.plot([0, -5], [0, 0], color="red")
 plt.plot([0, 5], [0, 0], color="red")
-plt.grid("x")
+plt.grid()
 plt.show()
 
 
@@ -34,12 +35,12 @@ def point(x: float, y: float):
     plt.text(x, y, f"({x},{y})")
 
 
-def drawAxis():
+def drawAxis(limit: int = 5):
     """Draw a red x and y axis 5 points each way"""
-    plt.plot([0, 0], [0, -5], color="red")
-    plt.plot([0, 0], [0, 5], color="red")
-    plt.plot([0, -5], [0, 0], color="red")
-    plt.plot([0, 5], [0, 0], color="red")
+    plt.plot([0, 0], [0, -limit], color="red")
+    plt.plot([0, 0], [0, limit], color="red")
+    plt.plot([0, -limit], [0, 0], color="red")
+    plt.plot([0, limit], [0, 0], color="red")
 
 
 plt.plot(4, 1, "ob")
