@@ -34,12 +34,12 @@ def point(x: float, y: float):
     plt.text(x, y, f"({x},{y})")
 
 
-def drawAxis():
+def drawAxis(limit: int = 5):
     """Draw a red x and y axis 5 points each way"""
-    plt.plot([0, 0], [0, -5], color="red")
-    plt.plot([0, 0], [0, 5], color="red")
-    plt.plot([0, -5], [0, 0], color="red")
-    plt.plot([0, 5], [0, 0], color="red")
+    plt.plot([0, 0], [0, -limit], color="red")
+    plt.plot([0, 0], [0, limit], color="red")
+    plt.plot([0, -limit], [0, 0], color="red")
+    plt.plot([0, limit], [0, 0], color="red")
 
 
 plt.plot(4, 1, "ob")
@@ -61,3 +61,22 @@ point(0, 0)
 plt.grid(axis="both", linestyle="--")
 drawAxis()
 plt.show()
+
+def d1(x: float = 6):
+    y = x * -2 + 13
+    point(x,y)
+    plt.plot([x, x], [y, 0], "g--")
+    plt.plot([x, 0], [y, y], "g--")
+    # plt.show()
+def line(x,y,x1,y1):
+    plt.plot([x,x1],[y,y1])
+
+for x in [4,5,6,7]: d1(x)
+y = 4 * -2 + 13
+y1 = 7 * -2 + 13
+line(4,y,7,y1 )
+drawAxis(7)
+plt.text(2,-3,"y = -2x + 13")
+plt.grid("both")
+plt.show()
+
