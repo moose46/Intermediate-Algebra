@@ -1,9 +1,11 @@
 from cProfile import label
 from math import sqrt
+from turtle import color
 
+# from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 from contourpy import LineType
-from matplotlib import pyplot as plt
 from matplotlib.lines import lineStyles
 
 # 2.2 the distance formula Beginning Calculus Shaum's
@@ -111,4 +113,11 @@ for xi in x:
 plt.grid()
 plt.title("hyperbola")
 drawAxis()
+plt.show()
+
+c = plt.Circle((0.2, 0.2), 0.2, fill=False, color="r")
+fig, ax = plt.subplots()
+ax.set_aspect(1)
+ax.add_artist(c)
+plt.title("My First Circle")
 plt.show()
